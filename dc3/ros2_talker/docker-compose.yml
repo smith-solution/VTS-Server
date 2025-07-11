@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  ros2_talker:
+    build: .
+    container_name: ros2_talker
+    networks:
+      - ros_net
+    environment:
+      - ROS_DOMAIN_ID=0
+
+networks:
+  ros_net:
+    external: true
