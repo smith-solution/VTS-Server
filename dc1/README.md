@@ -2,6 +2,10 @@
 
 ## 1.이미지 빌드
 
+```bash
+docker build -t dc1-mjpg .
+```
+
 
 
 ## 2.USB 카메라를 WSL2에 바인딩하기
