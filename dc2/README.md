@@ -38,3 +38,9 @@ sudo chmod +x node_modules/.bin/react-scripts
 
 - 관리자 권한 PowerShell에서:
 
+
+
+
+
+
+

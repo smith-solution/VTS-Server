@@ -1,4 +1,4 @@
-version: "3.8"
+version: '3.8'
 
 services:
   frontend:
@@ -27,7 +27,7 @@ services:
       - ros_net
     environment:
       - ROS_DOMAIN_ID=0
-
+      
 networks:
   ros_net:
-    external: true
+    external: true      
