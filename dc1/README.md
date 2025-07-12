@@ -84,6 +84,7 @@ docker build -t dc1-mjpg .
     ![image-20250712132623722](./../assets/image-20250712132623722.png)
     
     이후 `http://localhost:8090/?action=stream` 으로 접속하면 웹브라우저에 카메라 영상이 나옴.
+    ![image-20250712133734802](./../assets/image-20250712133734802.png)
 
 
 
