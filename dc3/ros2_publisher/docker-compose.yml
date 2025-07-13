@@ -1,0 +1,18 @@
+# this is binary package version
+
+version: "3.8"
+
+services:
+  ros2_talker:
+    image: osrf/ros:humble-desktop
+    container_name: ros2_publisher
+    networks:
+      - ros_net
+    environment:
+      - ROS_DOMAIN_ID=0
+    command: >
+      bash -c "source /opt/ros/humble/setup.bash && ros2 run demo_nodes_cpp talker"
+
+networks:
+  ros_net:
+    external: true

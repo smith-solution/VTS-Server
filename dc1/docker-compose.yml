@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  streamer:
+    build: ./streamer
+    container_name: mjpg-streamer
+    ports:
+      - "8080:8080"
+    devices:
+      - "/dev/video0:/dev/video0"    # ⚠️ Linux 또는 WSL2에서만 작동
+    restart: unless-stopped
