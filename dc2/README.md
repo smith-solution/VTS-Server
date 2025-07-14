@@ -6,6 +6,8 @@
 docker compose up --build
 ```
 
+![image-20250713180159359](./../assets/image-20250713180159359.png)
+
 
 
 ### cf. 추가로 알아두어야 할 명령어
