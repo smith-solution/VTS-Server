@@ -5,11 +5,11 @@ function App() {
   return (
     <div className="app-container">
       <div className="camera-grid">
-        {/* Camera1 */}
         <div className="camera-view">
-          <CameraStream
-            src="http://localhost:8090/?action=stream"
-            alt="Camera1"
+          <img
+            src="http://192.168.140.209:8080/stream"
+            alt="Camera1 Stream"
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
         </div>
         <div className="camera-view">Camera2</div>
@@ -22,27 +22,6 @@ function App() {
         <div className="car-box">Car2</div>
       </div>
     </div>
-  );
-}
-
-function CameraStream({ src, alt }) {
-  const [key, setKey] = React.useState(0);
-
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setKey((prevKey) => prevKey + 1);  // force image reload
-    }, 10000); // 10초마다 새로고침
-
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <img
-      key={key}
-      src={`${src}&dummy=${key}`}
-      alt={alt}
-      style={{ width: '80%', height: '100%', objectFit: 'cover' }}
-    />
   );
 }
 
